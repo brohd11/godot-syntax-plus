@@ -1,6 +1,5 @@
 @tool
 extends EditorSyntaxHighlighter
-#! remote
 
 const Dispatcher = preload("uid://cxqp5w88wkpm0") #! resolve SyntaxHighlighters.Components.Dispatcher
 const Palette = preload("uid://dqljmsg1n2c75") #! resolve SyntaxHighlighters.Components.Palette

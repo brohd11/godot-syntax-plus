@@ -2,7 +2,7 @@
 const PLUGIN_EXPORTED = false
 const CAN_INVALIDATE = false
 
-#! strip-cast ParserClass, ParserFunc, GDScriptParser
+#! gdp-strip-cast ParserClass, ParserFunc, GDScriptParser
 
 # debug
 const PRINT_DEBUG = false

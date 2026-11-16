@@ -13,6 +13,7 @@ const EditorConfig = SPClasses.EditorConfig
 
 const UtilsRemote = SPClasses.UtilsRemote
 const UClassDetail = UtilsRemote.UClassDetail
+#! gdp-strip-cast ScriptListManager
 const ScriptListManager = UtilsRemote.ScriptListManager
 
 # deps
