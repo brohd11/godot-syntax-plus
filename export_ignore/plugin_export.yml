@@ -1,19 +1,12 @@
 export_root: "res://addons/syntax_plus/export_ignore/exports"
 exports:
   -
-    exclude:
-      directories:
-        - "res://addons/syntax_plus/export_ignore"
-      file_extensions: []
-      files: []
     export_name: "syntax-plus{{version=syntax_plus}}"
     export_folder: "addons/syntax_plus"
-    other_transfers: []
     source: "res://addons/syntax_plus/"
-    remote_dir: "res://addons/syntax_plus/src/remote/"
+exported_require: ["brohd11/godot-gdscript-lsp@v0.1.0"]
 options:
   use_tag_in_cfg: true
-  exported_deps: ["brohd11/godot-gdscript-lsp@v0.1.0"]
   include_min_version: true
   include_import: true
   include_uid: true
