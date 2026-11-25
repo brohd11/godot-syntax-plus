@@ -198,7 +198,7 @@ func _read_group_data():
 	var script_editor = ScriptEditorRef.get_current_code_edit()
 	if script_editor == null:
 		return
-	#var t = ALibRuntime.Utils.UProfile.TimeFunction.new("READ GROUP")
+	#var t = UtilR.Profile.TimeFunction.new("READ GROUP")
 	
 	var group_id = 0
 	var bracket_stack = []

@@ -6,7 +6,7 @@ const CAN_INVALIDATE = false
 
 # debug
 const PRINT_DEBUG = false
-const TF = preload("uid://ft7o6vspsurv") #! resolve ALibRuntime.Utils.UProfile.TimeFunction
+const TF = UtilR.Profile.TimeFunction
 var sparse_t:TF
 # end debug
 
@@ -19,7 +19,7 @@ const EditorGDScriptParser = UtilsRemote.EditorGDScriptParser
 const ParserClass = GDScriptParser.ParserClass
 const ParserFunc = GDScriptParser.ParserFunc
 const UClassDetail = UtilsRemote.UClassDetail
-const UObject = UtilsRemote.UObject
+const USignal = UtilsRemote.USignal
 const UString = UtilsRemote.UString
 
 const DummyHelper = SPClasses.DummyHelper
@@ -940,7 +940,7 @@ func _invalidate_all():
 	var text_edit = get_text_edit()
 	if text_edit.has_redo():
 		return
-	var text_changed_signal_list = UObject.disconnect_signals_of_name(text_edit, "text_changed")
+	var text_changed_signal_list = USignal.disconnect_signals_of_name(text_edit, "text_changed")
 	DummyHelper.instance_highlighter()
 	#return
 	var top_line = text_edit.get_first_visible_line()
@@ -957,7 +957,7 @@ func _invalidate_all():
 	text_edit.scroll_vertical = top_line # more reliable than scroll bar it seems
 	await text_edit.get_tree().process_frame
 	
-	UObject.connect_signals_from_list(text_edit, text_changed_signal_list)
+	USignal.connect_signals_from_list(text_edit, text_changed_signal_list)
 
 
 
@@ -968,7 +968,7 @@ func invalidate(line:=-1):
 	var text_edit = get_text_edit()
 	if text_edit.has_redo():
 		return
-	var text_changed_signal_list = UObject.disconnect_signals_of_name(text_edit, "text_changed")
+	var text_changed_signal_list = USignal.disconnect_signals_of_name(text_edit, "text_changed")
 	
 	if line == -1 or line > text_edit.get_line_count():
 		line = text_edit.get_caret_line()
@@ -977,7 +977,7 @@ func invalidate(line:=-1):
 	text_edit.set_line(line, text)
 	text_edit.undo()
 	
-	UObject.connect_signals_from_list(text_edit, text_changed_signal_list)
+	USignal.connect_signals_from_list(text_edit, text_changed_signal_list)
 
 #^}
 

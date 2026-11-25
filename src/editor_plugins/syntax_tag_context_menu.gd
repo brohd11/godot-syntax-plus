@@ -4,8 +4,8 @@ const SLOT = EditorContextMenuPlugin.CONTEXT_SLOT_SCRIPT_EDITOR_CODE
 
 const UtilsRemote = preload("res://addons/syntax_plus/src/utils/utils_remote.gd")
 const Params = PopupWrapper.ContextPlugin.ItemParams
-const EditorConfig = preload("uid://vpqa5bp1krif") #! resolve SyntaxPlusSingleton.EditorConfig
-const EditorHL = preload("uid://bnredxxo1jopk") #! resolve SyntaxPlusSingleton.EditorHL
+const EditorConfig = SyntaxPlusSingleton.EditorConfig
+const EditorHL = SyntaxPlusSingleton.EditorHL
 
 const Utils = preload("res://addons/syntax_plus/src/utils/utils.gd")
 

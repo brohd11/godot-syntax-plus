@@ -1,12 +1,10 @@
-const PopupHelper = preload("uid://ba5x2r7gyvmej") #! resolve UtilR.Nodes.PopupMenus.PathHelper
-const UFile = preload("uid://bl33psa06nv1e") #! resolve ALibRuntime.Utils.UFile.Methods
-const URegex = preload("uid://cpjnb72qn8bmh")  #! resolve ALibRuntime.Utils.URegex
-const UString = preload("uid://cwootkivqiwq1") #! resolve ALibRuntime.Utils.UString
-const UObject = preload("uid://b6w3produe5fn") #! resolve ALibRuntime.Utils.UObject
+const PopupHelper = UtilR.Nodes.PopupMenus.PathHelper
+const URegex = UtilR.Strings.URegex
+const UString = UtilR.Strings.UString
+const USignal = UtilR.Signals.USignal
 
-const UGDScript = preload("uid://bqwb564jwff43") #! resolve ALibRuntime.Utils.UGDScript
-const UClassDetail = UGDScript.UClassDetail
-const SettingHelperEditor = preload("uid://dnov6vp7pjnbb") #! resolve SettingHelper.Editor
+const UClassDetail = UtilR.Objects.UClassDetail
+const SettingHelperEditor = SettingHelper.Editor
 
-const EditorGDScriptParser = preload("uid://t2dewmuth0sy") #! resolve EditorParser.EditorGDScriptParser
-const ScriptListManager = preload("uid://esgr5a6b8qbw") #! resolve EditorNodes.ScriptListManager
+const EditorGDScriptParser = EditorParser.EditorGDScriptParser
+const ScriptListManager = EditorNodes.ScriptListManager
