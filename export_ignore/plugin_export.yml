@@ -4,7 +4,7 @@ exports:
     export_name: "syntax-plus{{version=syntax_plus}}"
     export_folder: "addons/syntax_plus"
     source: "res://addons/syntax_plus/"
-exported_require: ["brohd11/godot-gdscript-lsp@v0.1.0"]
+exported_require: ["brohd11/godot-gdscript-lsp@v0.3.0"]
 options:
   use_tag_in_cfg: true
   include_min_version: true
@@ -17,7 +17,7 @@ options:
     parse_gd:
       reduce_access_paths: true
       optimizer:
-        enabled: true
+        enabled: false
         struct_mode: auto
         inline_mode: auto
         aggressive: true
