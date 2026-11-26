@@ -528,7 +528,7 @@ func update_class_members(allow_invalidate:=false) -> bool:
 			var ft = TF.new("FUNC ARG")
 			temp_func_arg_data[access_name] = {}
 			for f in class_obj.functions.keys():
-				var func_obj = class_obj.functions[f] as GDScriptParser.ParserFunc
+				var func_obj = class_obj.functions[f] as ParserFunc
 				var args = func_obj.get_arguments_raw().keys()
 				var chg = get_or_create_func_arg_helpers_unified(access_name, f, func_obj.declaration_line, func_obj.end_line, args, temp_func_arg_data)
 				members_changed = maxi(members_changed, chg)
